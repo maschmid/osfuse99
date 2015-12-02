@@ -33,6 +33,8 @@
     <fabric8.service.containerPort>8181</fabric8.service.containerPort>
     <fabric8.service.port>8181</fabric8.service.port>
 
+    <fabric8.replicas>3</fabric8.replicas>
+
     <fabric8.iconRef>camel</fabric8.iconRef>
   </properties>
 
