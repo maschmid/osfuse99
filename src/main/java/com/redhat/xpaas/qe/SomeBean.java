@@ -23,6 +23,9 @@ import io.fabric8.annotations.ServiceName;
 import io.fabric8.annotations.Endpoint;
 import javax.enterprise.inject.Instance;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Singleton
 @Named("counterBean")
 public class SomeBean {
@@ -33,6 +36,6 @@ public class SomeBean {
     Instance<List<String>> fooEndpoints;
 
     public String someMethod(String body) {
-        return "Endpoints: " + fooEndpoints.stream().collect(Collectors.joining(", "));
+        return "Endpoints: " + fooEndpoints.get().stream().collect(Collectors.joining(", "));
     }
 }
